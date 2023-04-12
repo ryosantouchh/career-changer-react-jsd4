@@ -1,40 +1,39 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 function App() {
-    // adding state here.
+  // adding state here.
+  const [state, setState] = useState("");
 
   const handleClick = (value) => {
-    // code here.
+    setState(value);
   };
 
   return (
     <div>
-      <button>Fullname</button>
-      <button>Age</button>
-      <button>Picture</button>
-      <DisplayInfo />
+      <button onClick={() => handleClick("Fullname")}>Fullname</button>
+      <button onClick={() => handleClick("Age")}>Age</button>
+      <button onClick={() => handleClick("Picture")}>Picture</button>
+      <DisplayInfo state={state} name="kong" age="26" />
     </div>
   );
 }
 
 function DisplayInfo(props) {
+  const { state, name, age } = props;
+  // props = { state: ... , name="kong", age="26" }
 
-  let ___;
-  if (___ === 'Fullname') {
-    ___ = <h2>John Doe</h2>;
-  } else if (___ === 'Age') {
-    ___ = <h2>30</h2>;
-  } else if (___ === 'Picture') {
-    ___ = <img src="https://via.placeholder.com/150" alt="Placeholder" />;
+  let content;
+  if (state === "Fullname") {
+    content = <h2>Touch Aka Toxic Boi</h2>;
+  } else if (state === "Age") {
+    content = <h2>27</h2>;
+  } else if (state === "Picture") {
+    content = <img src="https://via.placeholder.com/150" alt="Placeholder" />;
   } else {
-    ___ = <p>Please select an option.</p>;
+    content = <p>Please select an option.</p>;
   }
 
-  return (
-    <div>
-      {___}
-    </div>
-  );
+  return <div>{content}</div>;
 }
 
 export default App;

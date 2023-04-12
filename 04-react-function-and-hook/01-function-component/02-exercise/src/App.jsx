@@ -1,40 +1,63 @@
-import React from 'react';
+import React, { useState } from "react";
 
 function App() {
+  const [temp, setTemp] = useState(25);
+
+  const handleClickIncrement = () => {
+    setTemp((prev) => (prev = prev + 1));
+  };
+
+  const handleClickDecrement = () => {
+    if (temp > 0) {
+      setTemp((prev) => (prev -= 1));
+    }
+  };
+
   return (
     <div id="app">
-      <Header />
-      <Content />
-      <Footer />
+      <Header temp={temp} />
+      <Content temp={temp} />
+      <Footer
+        handleClickIncrement={handleClickIncrement}
+        handleClickDecrement={handleClickDecrement}
+      />
     </div>
   );
 }
 
-function Header() {
+function Header(props) {
   return (
-    // Code here
-    // <Header />
+    <header>
+      <span>Turn on / off</span>
+      <p>Current Temperature: {props.temp}</p>
+    </header>
   );
 }
 
-function Content() {
+function Content(props) {
   return (
-    // Code here
-    // <Content />
+    <main>
+      <Temperature temp={props.temp} />
+    </main>
   );
 }
 
-function Temperature() {
+function Temperature(props) {
   return (
-    // Code here
-    // <Temperature />
+    <div id="temperature">
+      <span>{props.temp} Oc</span>
+    </div>
   );
 }
 
-function Footer() {
+function Footer(props) {
+  const { handleClickIncrement, handleClickDecrement } = props;
+
   return (
-    // Code here
-    // <Footer />
+    <footer>
+      <button onClick={handleClickIncrement}>Up</button>
+      <button onClick={handleClickDecrement}>Down</button>
+    </footer>
   );
 }
 
