@@ -17,11 +17,13 @@ const Home = () => {
 
   const [role, setRole] = useState("");
 
-  useEffect(() => {
+  const syncData = () => {
     const _role = getUserRole();
     console.log(_role);
     setRole(_role);
-  }, [role]);
+  };
+
+  useEffect(syncData, [role]);
 
   // useEffect(() => {
   //   console.log(role);
