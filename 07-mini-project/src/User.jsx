@@ -1,8 +1,5 @@
-
 const User = () => {
-    return (
-        <div>USER</div>
-    )
-}
+  return <div className="user-page-container">THIS IS HOMEPAGE</div>;
+};
 
-export default User
+export default User;

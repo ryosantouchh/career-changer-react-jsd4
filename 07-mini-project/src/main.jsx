@@ -1,26 +1,32 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import Home from './Home'
-import Admin from './Admin'
-import Login from './Login'
-import './assets/style/index.css'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import Home from "./Home";
+import Admin from "./Admin";
+import Login from "./Login";
+import "./assets/style/index.css";
+import "./assets/style/App.css";
 
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
-import UserContext from './UserContext';
-import Signup from './Signup'
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import UserContext from "./UserContext";
+import Signup from "./Signup";
 
 const router = createBrowserRouter([
   {
-    path: '/',
-    element: <Home />
+    path: "/",
+    element: <Home />,
   },
-])
+  {
+    path: "/signup",
+    element: <Signup />,
+  },
+  {
+    path: "/login",
+    element: <Login />,
+  },
+]);
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <UserContext>
     <RouterProvider router={router} />
   </UserContext>
-)
+);

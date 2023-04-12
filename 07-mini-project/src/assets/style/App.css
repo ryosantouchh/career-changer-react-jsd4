@@ -1,0 +1,216 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --green: #3e9607;
+  --dark-grey: #222831;
+  --grey: #393e46;
+  --white: #eeeeee;
+}
+
+body {
+  background-color: var(--dark-grey);
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+/* ********** navbar ********** */
+/* ********** navbar ********** */
+
+ul {
+  display: flex;
+  gap: 16px;
+  justify-content: end;
+  align-items: center;
+  background-color: var(--dark-grey);
+  height: 80px;
+  padding: 0 24px;
+  margin-bottom: 48px;
+}
+
+ul li {
+  list-style: none;
+  background-color: var(--green);
+  height: 40px;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--white);
+  text-transform: uppercase;
+  font-size: 24px;
+}
+
+li:hover {
+  cursor: pointer;
+  background-color: var(--dark-grey);
+  border: 1px solid var(--green);
+  scale: 0.97;
+  transition: 0.2s ease-in-out;
+}
+
+/* ********** home - admin ********** */
+/* ********** home - admin ********** */
+
+.table-container {
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+}
+
+table,
+td,
+th {
+  border-collapse: collapse;
+}
+
+th:first-child,
+td:first-child {
+  width: 100px;
+}
+
+th {
+  background-color: var(--grey);
+}
+
+td {
+  border-bottom: 1px solid rgba(236, 236, 236, 0.3);
+  text-align: center;
+}
+
+/* tr > td:nth-child(1) {
+  text-align: center;
+} */
+
+td,
+th {
+  height: 40px;
+  width: 240px;
+  padding: 0 16px;
+}
+
+/* ********** home - user ********** */
+/* ********** home - user ********** */
+.user-page-container {
+  text-align: center;
+  color: var(--white);
+  font-size: 32px;
+}
+
+/* ********** sign up ********** */
+/* ********** sign up ********** */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 500px;
+  margin: 0 auto;
+}
+
+form label {
+  color: var(--white);
+  text-transform: uppercase;
+}
+
+form input {
+  height: 32px;
+  padding: 0 16px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 0px;
+}
+
+form input:focus {
+  outline: none;
+  color: #222831;
+}
+
+form > div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+form button {
+  margin: 8px auto 0;
+  height: 40px;
+  border-radius: 12px;
+  width: 250px;
+  background-color: var(--green);
+  border: 0px;
+  color: var(--white);
+  font-size: 20px;
+}
+
+form button:hover {
+  cursor: pointer;
+  background-color: var(--dark-grey);
+  border: 1px solid var(--green);
+  transition: 0.2s ease-in-out;
+  scale: 0.97;
+  font-weight: bold;
+}
+
+/* ********** login ********** */
+/* ********** login ********** */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 500px;
+  margin: 0 auto;
+}
+
+.login-container label {
+  color: var(--white);
+  text-transform: uppercase;
+}
+
+.login-container input {
+  height: 32px;
+  padding: 0 16px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 0px;
+}
+
+.login-container input:focus {
+  outline: none;
+  color: #222831;
+}
+
+.login-container > div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.login-container button {
+  margin: 8px auto 0;
+  height: 40px;
+  border-radius: 12px;
+  width: 250px;
+  background-color: var(--green);
+  border: 0px;
+  color: var(--white);
+  font-size: 20px;
+}
+
+.login-container button:hover {
+  cursor: pointer;
+  background-color: var(--dark-grey);
+  border: 1px solid var(--green);
+  transition: 0.2s ease-in-out;
+  scale: 0.97;
+  font-weight: bold;
+}
